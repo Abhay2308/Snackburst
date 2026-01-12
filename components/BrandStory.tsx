@@ -24,10 +24,7 @@ export const BrandStory: React.FC = () => {
             <div className="h-20 w-20 rounded-2xl border-4 border-white overflow-hidden shadow-2xl transform rotate-3">
               <img src="https://picsum.photos/seed/founder-snack/200/200" alt="Founder" className="w-full h-full object-cover" />
             </div>
-            <div>
-              <p className="font-poppins font-black text-xl uppercase tracking-widest">Arjun Varma</p>
-              <p className="text-sm font-bold opacity-80 uppercase tracking-widest">Founding Foodie</p>
-            </div>
+            
           </div>
         </div>
         
