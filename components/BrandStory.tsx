@@ -20,12 +20,6 @@ export const BrandStory: React.FC = () => {
               Snack without regret, we have got your back.
             </p>
           </div>
-          <div className="mt-16 flex items-center space-x-6">
-            <div className="h-20 w-20 rounded-2xl border-4 border-white overflow-hidden shadow-2xl transform rotate-3">
-              <img src="https://picsum.photos/seed/founder-snack/200/200" alt="Founder" className="w-full h-full object-cover" />
-            </div>
-            
-          </div>
         </div>
         
         <div className="order-1 lg:order-2 relative">
