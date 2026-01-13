@@ -11,7 +11,7 @@ export const BrandStory: React.FC = () => {
           <h2 className="section-heading mb-10 border-l-4 border-white pl-6 uppercase tracking-tighter">The Vibe</h2>
           <div className="body-text space-y-8 text-xl md:text-2xl font-light">
             <p className="leading-relaxed">
-              <span className="bg-white text-brandOrange px-4 py-1 font-extrabold rounded-lg inline-block transform -rotate-1">Born foodies, turned founders</span>— we refuse to call snacking a sin. 
+              <span className="bg-white text-brandOrange px-4 py-1 font-extrabold rounded-lg inline-block transform -rotate-1 shadow-lg">Born foodies, turned snack-geeks</span>— we refuse to call snacking a sin. 
             </p>
             <p className="leading-relaxed font-medium">
               So we took India's very own superfood, spiced it up with <span className="underline decoration-white decoration-4 underline-offset-8 font-black">crazy-good flavours</span>, and made guilt-free munching a global vibe. 
@@ -27,7 +27,7 @@ export const BrandStory: React.FC = () => {
           <img
             src={SHARED_IMAGE}
             alt="Makhana Superfood"
-            className="rounded-[3rem] shadow-2xl w-full object-cover aspect-[4/5] relative z-10 border-4 border-white"
+            className="rounded-[3rem] shadow-2xl w-full object-cover aspect-[4/5] relative z-10 border-4 border-white transform hover:rotate-1 transition-transform duration-700"
           />
           {/* Pop-out element */}
           <div className="absolute -bottom-10 -right-10 bg-black text-white p-10 rounded-[2.5rem] z-20 shadow-2xl hidden md:block border-4 border-white">
