@@ -8,20 +8,48 @@ import { Testimonials } from './components/Testimonials';
 import { BrandStory } from './components/BrandStory';
 import { Feedback } from './components/Feedback';
 import { Footer } from './components/Footer';
+import { ProductDetail } from './components/ProductDetail';
 
 const App: React.FC = () => {
+  const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
+
+  // Scroll to top when switching views
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedProductId]);
+
+  const handleLogoClick = () => {
+    setSelectedProductId(null);
+  };
+
   return (
     <div className="min-h-screen selection:bg-brandOrange selection:text-white">
       <AnnouncementBar />
-      <div className="relative mt-[64px] md:mt-[80px]">
-        <Navbar />
+      <div className="relative mt-[80px] md:mt-[112px]">
+        <Navbar 
+          onProductSelect={(id) => setSelectedProductId(id)} 
+          onLogoClick={handleLogoClick}
+        />
+        
         <main>
-          <Hero />
-          <Products />
-          <Testimonials />
-          <BrandStory />
-          <Feedback />
+          {selectedProductId ? (
+            <ProductDetail 
+              productId={selectedProductId} 
+              onBack={() => setSelectedProductId(null)} 
+            />
+          ) : (
+            <>
+              <Hero />
+              <Products 
+                onProductSelect={(id) => setSelectedProductId(id)} 
+              />
+              <Testimonials />
+              <BrandStory />
+              <Feedback />
+            </>
+          )}
         </main>
+        
         <Footer />
       </div>
     </div>
